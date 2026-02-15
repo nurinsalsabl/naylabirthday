@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Surprise🎀</title>
+
+  <!-- Google Font for aesthetic notes -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fde2e4, #e0c3fc);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5a4a6f;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    .cute-elements {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    input[type="password"] {
+      padding: 12px 15px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      width: 70%;
+      max-width: 300px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border-radius: 20px;
+      border: none;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .notes {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff5fa;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+
+    min-height: 100%;
+    }
+
+
+    .notes h2 {
+      font-family: 'Pacifico', cursive;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: auto;
+      border-radius: 15px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      font-family: 'Pacifico', cursive;
+      font-size: 18px;
+      resize: none;
+      outline: none;
+      background: #fff;
+      overflow: auto;
+    }
+
+    .error {
+      color: #ff6b6b;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .memory-layout {
+      display: flex;
+      gap: 25px;
+      margin-top: 20px;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .photobooth {
+      background: #fff;
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      width: 220px;
+      flex-shrink: 0;
+    }
+
+    .photo-frame {
+      background: #fdf1f7;
+      border-radius: 15px;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-frame img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .memory-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .photobooth {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    .byline {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 16px;
+      color: #a08fbf;
+    }
+
+    .home-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-pic {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border: 3px solid #fbc2eb;
+      background: #fff;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HOME / PASSWORD SCREEN -->
+  <div class="card" id="home">
+    <div class="home-header">
+      <div class="cute-elements">🎂✨💖🌸🧸🎀</div>
+      <div class="profile-pic">
+        <img src="nayla.png" alt="Nayla" />
+      </div>
+    </div>
+
+    <h1>Happy Late Birthday, Bub... </h1>
+    <p>ini ada pass nya, jadi tidak sembarang orang yang bisa buka. 💌hint: tahun kita kenal</p>
+
+    <input type="password" id="passwordInput" placeholder="tahun brp coba? lu inget kagak?" />
+    <br />
+    <button onclick="checkPassword()">YAKIN BETUL</button>
+
+    <div class="error" id="errorMsg"></div>
+
+    <footer class="byline">
+      By: Billa Cantik who always be your biggest supporter 🌙✨
+    </footer>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <audio id="bgMusic" loop>
+    <source src="backsound.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card hidden" id="content">
+    <div class="cute-elements">🎉💐💝🌷🎈</div>
+
+    <h1>Happy Birthday, My Beloved Dorothea, Nayla Sarachenita, Sayangku, Bububku🎂</h1>
+
+    <p>
+      This isn’t just about your birthday letter, nay. it’s about me trying to celebrating the person who quietly changed my life in ways i don’t think you’ll ever fully realize.
+      You have this gentle way of making the world feel safer, softer, and kinder just by being in it. On days when everything feels heavy, you somehow make it easier to breathe. I don’t know how i got so lucky to have you in my life, but i know for sure, i never want to imagine a version of my world without you in it.
+    </p>
+
+    <p>
+      Thank you for being my comfort, my laughter, my calm in the middle of chaos. For staying, even when things aren’t easy. For seeing me in ways no one else ever has.
+    </p>
+
+    <p>
+      I hope this new year brings you moments that feel like quiet happiness, dreams that slowly take shape, and reminders (either in big or small ways) of how deeply you are loved. If I’m allowed to, i want to be there for as many of those moments as life gives us.
+    </p>
+
+    <h2>🎥 Since we're getting old, i give a little space for this template capcut wkwk</h2>
+    <video controls>
+      <source src="video1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- PHOTO + NOTES LAYOUT -->
+    <h2>📸💌 a little extra birthday letter you've been waiting for..</h2>
+
+    <div class="memory-layout">
+      <!-- LEFT -->
+      <div class="photobooth">
+        <div class="photo-frame"><img src="photo1.png" alt="Memory 1" /></div>
+        <div class="photo-frame"><img src="photo2.png" alt="Memory 2" /></div>
+        <div class="photo-frame"><img src="photo3.jpeg" alt="Memory 3" /></div>
+        <div class="photo-frame"><img src="photo4.jpeg" alt="Memory 4" /></div>
+        <div class="photo-frame"><img src="photo5.jpeg" alt="Memory 5" /></div>
+      </div>
+
+      <!-- RIGHT: NOTES -->
+      <div class="notes">
+        <h2>💌 A Note from My Heart</h2>
+        <textarea readonly rows="30" placeholder="Dear Nayla, Happy Birthday ya..
+
+Banyak wishes dan ucapan terima kasih yang sudah aku ketik di awal surat ini.. tapi aku tetep pengen ngetik beberapa hal lainnya.
+
+Maaf ya, sebagai teman, mungkin aku banyak kurangnya. Maaf ya nay walau aku juga berterima kasih karena aku yang sesering itu ganggu kamu dengan banyak sekali annoying texts, mungkin beberapa dari chatku itu juga pernah bikin kamu sakit hati, aku minta maaf.
+dan all the bad things happened to you, aku minta maaf. walau bukan aku yang melakukan, karena mungkin pas di waktu kamu butuh aku banget, aku gaada. emang sih... aku ga selamanya bisa ada di sebelahmu tapi harusnya aku bisa berusaha same as like as kamu yang selalu ada pas aku lagi down dan segila itu. tetap selalu kabari aku ya kalo kmu butuh apa-apa, i'll try my best, aku janji.
+
+kamu harus panjang umur ya, nayla.. jangan mati dulu sebelum aku. kamu harus lihat aku melalui proses hidupku, aku juga akan melakukan hal yang sama, terus kita bisa merasakan hasil dari proses itu sama-sama.
+
+kamu penting banget buat aku (dan pasti ga aku doang iyiy).. bahagia selalu ya, semoga selalu ada jalan buat kamu reach ur goals, semoga selalu dipertemukan dengan orang baik paling baik di dunia ini.
+semoga, kalo semisal tiba-tiba aku gabisa nemenin kamu lagi, kamu bisa selalu menemukan aku di orang lain (aku gamau dilupainnnn, aku tetep mau jadi barisan orang-orang yang kamu prioritaskan itu!!)
+
+ini aku pilih musik ini karena menurutku lagu ini diciptakan untuk orang-orang keren, yang selalu membuat pencapaian hidup, yang gamau stuck nan or di situ-situ aja. kamu orang nomor 1 yang memang layak jadi objek dari lagu ini.
+selain itu, kalo aku nemu tempat makan baru yang ku rasa layak dicoba, aku selalu inget kamu, aku selalu seneng bisa makan bareng kamu. semoga pertemanan ini ada, dan berlaku selamanya ya..
+
+sekali lagi, selamat ulang tahun, please panjang umur, be happy forever with/without me!!!!
+
+!!!you are deeply loved, truly valued, and never alone as long as i’m here, JANGAN PERNAH SEDIH SENDIRI!!!
+"></textarea>
+      </div>
+    </div>
+
+    <footer class="byline">
+      By: Billa Cantik, Forever your biggest supporter 🌙✨
+    </footer>
+  </div>
+
+  <script>
+    const SECRET_CODE = "2017"; 
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const errorMsg = document.getElementById("errorMsg");
+      const music = document.getElementById("bgMusic");
+
+      if (input === SECRET_CODE) {
+        document.getElementById("home").classList.add("hidden");
+        document.getElementById("content").classList.remove("hidden");
+
+        if (music) {
+          music.volume = 0.5;
+          music.play().catch(() => {});
+        }
+      } else {
+        errorMsg.textContent = "DUHHHH KOK SALAH SIH OON, RUSAK INI SEKALI LAGI💔";
+      }
+    }
+    
+  </script>
+
+</body>
+</html>
